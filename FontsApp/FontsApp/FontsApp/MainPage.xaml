@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FontsApp"
+             x:Class="FontsApp.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" FontFamily="{StaticResource LobsterTwo-Bold}" />
+        <!--Binding to Label-->
+        <Label FontFamily="{StaticResource MaterialFontFamily}" Text="{Binding IconCamera}" TextColor="Red" FontSize="48"/>
+        <!--Binding to Glyph-->
+        <Image BackgroundColor="Blue">
+            <Image.Source>
+                <FontImageSource Glyph="{Binding IconCamera}"
+                         FontFamily="{StaticResource MaterialFontFamily}"
+                         Size="44" />
+            </Image.Source>
+        </Image>
+        <!--Directly using Glyph-->
+        <Image BackgroundColor="#D1D1D1">
+            <Image.Source>
+                <FontImageSource Glyph="&#xf10b;"
+                         FontFamily="{StaticResource MaterialFontFamily}"
+                         Size="44" />
+            </Image.Source>
+        </Image>
+        <!--Using Glyph from resource-->
+        <Image
+            HeightRequest="44"
+            WidthRequest="44">
+            <Image.Source>
+                <FontImageSource
+                    FontFamily="{DynamicResource MaterialFontFamily}"
+                    Glyph="{StaticResource Pdf}"
+                    Size="44" Color="Red"/>
+            </Image.Source>
+        </Image>
+
+        <!--Default-->
+        <Label Text="Welcome to Xamarin.Forms!"/>
+    </StackLayout>
+
+</ContentPage>
