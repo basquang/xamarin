@@ -39,6 +39,13 @@
 
         <!--Default-->
         <Label Text="Welcome to Xamarin.Forms!"/>
+        <ImageButton BackgroundColor="Red">
+            <ImageButton.Source>
+                <FontImageSource Glyph="{Binding IconCamera}"
+                         FontFamily="{StaticResource MaterialFontFamily}"
+                         Size="44" />
+            </ImageButton.Source>
+        </ImageButton>
     </StackLayout>
 
 </ContentPage>
